@@ -1,6 +1,8 @@
 FROM ghcr.io/berriai/litellm:main-latest
 
-ENV PORT=10000
+ENV PORT=8080
 ENV PYTHONUNBUFFERED=1
 
-CMD ["--config", "/app/config.yaml", "--port", "10000", "--num_workers", "1"]
+COPY config.yaml /app/config.yaml
+
+CMD ["--config", "/app/config.yaml", "--port", "8080", "--num_workers", "1"]
