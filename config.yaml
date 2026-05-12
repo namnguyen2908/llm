@@ -1,0 +1,14 @@
+model_list:
+  - model_name: recruiter-ai
+    litellm_params:
+      model: gemini/gemini-2.5-flash
+      api_key: os.environ/GEMINI_API_KEY
+
+router_settings:
+  fallback_models:
+    recruiter-ai:
+      - groq/llama-3.1-8b-instant
+      - cerebras/llama-4-scout-17b-16e-instruct
+
+general_settings:
+  master_key: os.environ/LITELLM_MASTER_KEY
