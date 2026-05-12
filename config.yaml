@@ -5,9 +5,8 @@ model_list:
       api_key: os.environ/GEMINI_API_KEY
 
 router_settings:
-  fallback_models:
-    recruiter-ai:
-      - groq/llama-3.1-8b-instant
+  fallbacks:
+    - ["gemini/gemini-1.5-flash", "groq/llama-3.1-8b-instant"]
 
 general_settings:
   master_key: os.environ/LITELLM_MASTER_KEY
