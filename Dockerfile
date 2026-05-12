@@ -5,4 +5,4 @@ ENV PYTHONUNBUFFERED=1
 
 COPY config.yaml /app/config.yaml
 
-CMD ["litellm", "--config", "/app/config.yaml", "--port", "8080", "--num-workers", "1"]
+CMD ["litellm", "--config", "/app/config.yaml", "--port", "8080", "--num_workers", "1"]
