@@ -1,12 +1,13 @@
 model_list:
   - model_name: recruiter-ai
     litellm_params:
-      model: gemini/gemini-1.5-flash
-      api_key: os.environ/GEMINI_API_KEY
+      model: groq/openai/gpt-oss-120b
+      api_key: os.environ/GROQ_API_KEY
 
 router_settings:
-  fallbacks:
-    - ["gemini/gemini-1.5-flash", "groq/llama-3.1-8b-instant"]
+  fallback_models:
+    recruiter-ai:
+      - gemini/models/gemini-3-flash-preview
 
 general_settings:
   master_key: os.environ/LITELLM_MASTER_KEY
